@@ -3,6 +3,7 @@
 
     <div class="up-menu">
       <div class="container d-flex justify-content-between ">
+        <!-- social -->
         <div class="social">
           <a href="#">
             <i class="fa-brands fa-facebook-f"></i>
@@ -16,49 +17,68 @@
           <a href="#">
             <i class="fa-brands fa-youtube"></i>
           </a>
-        </div>
-
-        <div class="nav-account cg-nav-account">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-         
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item shopping-cart">
-                <a class="nav-link" href="#">Shopping Cart</a>
+        </div>  
+        <!-- menu-account -->
+        <div class="menu-tendina">
+          <nav>
+            <ul>
+              <li>
+                Shopping Cart
               </li>
-              <li class="nav-item dropdown my-account">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  My Account
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+              <li>
+                <span>My Account  </span><i class="fa-solid fa-angle-down"></i>
               </li>
-              <li class="nav-item dropdown cart">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa-solid fa-cart-shopping"></i> 
-                  <span>CART</span> 
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+              <li class="li-cart">
+                <i class="fa-solid fa-cart-shopping"></i> <span> Cart  </span> <i class="fa-solid fa-angle-down"></i>
               </li>
             </ul>
-          </div>
-        </div>
-        </nav>
+          </nav>
+         
         </div>
       </div>
     </div>
-    <div class="down-menu debug h100">down-menu
-      <div class="container d-flex justify-content-between debug">
-        <div class="logo debug">logo</div>
-        <div class="menu-tendina debug">menu a tendina bootstrap</div>
+
+    <!-- down-menu -->
+    <div class="down-menu">
+      <div class="container d-flex justify-content-between">
+        <div class="logo">
+          <img src="../assets/img/images/classic_shop_logo2x.png" alt="logo">
+        </div>
+
+        <div class="menu-principale">
+          <nav>
+            <ul>
+              <li>
+                <span>Home  </span><i class="fa-solid fa-angle-down"></i>
+              </li>
+              <li>
+                <span>Shop  </span><i class="fa-solid fa-angle-down"></i>
+              </li>
+              <li>
+                <span>Products  </span><i class="fa-solid fa-angle-down"></i>
+              </li>
+              <li>
+                <span>Categories  </span><i class="fa-solid fa-angle-down"></i>
+              </li>
+              <li>
+                <span>News  </span>
+              </li>
+              <li>
+                <span>Elements  </span><i class="fa-solid fa-angle-down"></i>
+              </li>
+              <li class="li-btn">
+                <button type="button" class="btn btn-primary cg-btn"> SHOP NOW!</button>
+              </li>
+              <li class="li-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </li>
+            </ul>
+              
+          </nav>
+        </div>
+        
+
+        
       </div>
     </div>
 
@@ -77,36 +97,76 @@ name: "HeaderComponent",
 
 header{
   .up-menu{
+    color:rgb(107, 106, 107);
     border-bottom: 1px solid rgb(107, 106, 107);
+    height: 50px;
+
   }
 
   .social{
-    color:rgb(107, 106, 107);
     .fa-brands{
       color:rgb(107, 106, 107);
       font-size: 15px;
       padding: 10px;
+      height: 50px;
     }
   }
-  .cg-nav-account{
+  .menu-tendina{
     ul li{
-      height: 100%;
-    }
-    .shopping-cart, .my-account{
-      border-right: 1px solid rgb(107, 106, 107);
-      padding: 0 15px;
-    }
-    .cart{
-      padding: 0 30px 0 30px;
-      background-color: rgb(250, 250, 250);
-      .fa-cart-shopping{
-        padding-right: 20px;
-        color: black;
+      display: inline-block;
+      height: 50px;
+      padding: 0 20px 0 20px;
+      border-right:1px solid rgb(107, 106, 107) ;
+      line-height: 50px;
+        &:hover{
+        cursor: pointer;
       }
+
+    }
+    .li-cart{
+      padding: 0 80px 0 80px;
+    }
+    .fa-cart-shopping{
+      color: black;
+    }
+  }
+
+  }
+
+  .down-menu{
+    color:rgb(107, 106, 107);
+    .logo{
+      width: 200px;
+      padding:20px 15px 20px 15px;
+    }
+     ul li{
+      display: inline-block;
+      height: 90px;
+      padding: 0 10px 0 10px;
+      border-top: 2px solid white;
+      line-height: 100px;
+        &:hover{
+        cursor: pointer;
+        border-top: 2px solid rgb(66, 126, 213);
+        color:rgb(66, 126, 213)
+      }
+     }
+      .li-btn:hover{
+        border-top: 2px solid white;
+      }
+      .li-search:hover{
+        border-top: 2px solid white;
+      }
+    .cg-btn{
+      border-radius: 20px !important;
+      padding: 5px 20px 5px 20px;
+      margin-right: 6px;
+      font-size: 15px;
     }
 
   }
 
-}
+
+
 
 </style>

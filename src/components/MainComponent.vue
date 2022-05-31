@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="jumbotron d-flex justify-content-center align-items-center debug h300">jumbotron</div>
+    <JumbotronComponent/>
     
     <div class="featured d-flex debug h300">featured
       <div class="container debug">
@@ -82,9 +82,10 @@
 </template>
 
 <script>
+import JumbotronComponent from './JumbotronComponent.vue';
 export default {
-  name: "MainComponent",
-
+    name: "MainComponent",
+    components: { JumbotronComponent }
 }
 </script>
 
